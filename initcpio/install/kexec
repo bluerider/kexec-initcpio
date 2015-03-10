@@ -1,0 +1,12 @@
+#!/bin/ash
+
+build() {
+  add_binary kexec
+  add_runscript
+}
+
+help() {
+  cat <<HELPEOF
+This hook kexecs into a kernel.
+HELPEOF
+}

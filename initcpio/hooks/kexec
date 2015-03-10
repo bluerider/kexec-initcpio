@@ -1,0 +1,7 @@
+#!/bin/ash
+
+run_hook() {
+  $mount_handler /new_root
+  kexec -l /new_root/boot/vmlinuz-linux --initrd=/new_root/boot/initramfs-linux-fallback.img --reuse-cmdline
+  kexec -e
+}
